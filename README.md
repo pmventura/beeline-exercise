@@ -29,7 +29,7 @@ npm run dev
 
 ## Deployment to AWS S3
 
-### GitHub Actions (Recommended)
+### GitHub Actions
 
 This project includes a GitHub Actions workflow for automatic deployment to AWS S3 on every push to `main`.
 
@@ -45,21 +45,6 @@ This project includes a GitHub Actions workflow for automatic deployment to AWS 
 See `.github/workflows/deploy.yml` for details.
 
 ---
-
-#### Manual Deployment
-
-1. Build the app for production:
-   ```bash
-   npm run build
-   ```
-2. Upload the contents of the `dist/` folder to your S3 bucket:
-   ```bash
-   aws s3 sync dist/ s3://your-bucket-name --delete
-   ```
-3. Make sure your S3 bucket is configured for static website hosting.
-4. (Optional) Set up your domain and SSL in AWS Route 53 and Certificate Manager.
-
-For more details, see the [AWS S3 static website documentation](https://docs.aws.amazon.com/AmazonS3/latest/userguide/WebsiteHosting.html).
 
 ## Running Tests
 
